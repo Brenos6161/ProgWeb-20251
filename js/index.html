@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Tabuada de 1 a 10</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    table {
+      border-collapse: collapse;
+      border: 1px solid black;
+    }
+
+    th {
+      border: 1px solid black;
+      background-color: #f2f2f2;
+      padding: 5px;
+      text-align: center;
+    }
+
+    td {
+      border: 1px solid black;
+      padding: 5px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <script>
+    // Função para criar a tabuada de 1 a 10
+    for (let i = 1; i <= 10; i++) {
+      const table = document.createElement('table');
+
+      // Título da tabuada
+      const header = document.createElement('tr');
+      const th = document.createElement('th');
+      th.colSpan = 2;
+      th.textContent = `Produtos de ${i}`;
+      header.appendChild(th);
+      table.appendChild(header);
+
+      // Linhas da tabuada
+      for (let j = 1; j <= 10; j++) {
+        const row = document.createElement('tr');
+
+        const td1 = document.createElement('td');
+        td1.textContent = `${i}x${j}`;
+
+        const td2 = document.createElement('td');
+        td2.textContent = i * j;
+
+        row.appendChild(td1);
+        row.appendChild(td2);
+        table.appendChild(row);
+      }
+
+      // Adiciona a tabela ao body
+      document.body.appendChild(table);
+    }
+  </script>
+</body>
+</html>
