@@ -1,0 +1,19 @@
+// Criando dois conjuntos com máximo valor 100
+const setA = new IntegerSet(100);
+const setB = new IntegerSet(100);
+
+// Inserindo alguns elementos (baseado nos números da imagem)
+[23, 76, 14, 89, 31, 62, 28].forEach(num => setA.insert(num));
+[14, 62, 98, 17].forEach(num => setB.insert(num));
+
+console.log("Conjunto A:", setA.toString());
+console.log("Conjunto B:", setB.toString());
+
+const uniao = setA.union(setB);
+console.log("União A ∪ B:", uniao.toString());
+
+const intersecao = setA.intersection(setB);
+console.log("Interseção A ∩ B:", intersecao.toString());
+
+const diferenca = setA.difference(setB);
+console.log("Diferença A - B:", diferenca.toString());
