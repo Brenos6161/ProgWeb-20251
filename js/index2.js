@@ -31,5 +31,5 @@ while (continuar) {
   } else {
     console.log(`Você perdeu! A sua pontuação foi de ${pontuacao}\n`);
     continuar = false;
-  }
+  }                     
 }
